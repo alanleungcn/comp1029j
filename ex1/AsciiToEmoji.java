@@ -12,13 +12,11 @@
 
 import java.util.Scanner;
 
-public class AsciiToEmoji
-{
+public class AsciiToEmoji {
     /**
      * The starting point of the program.
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         // Task 1.1: Prepare a scanner for user input handling
         Scanner scanner = new Scanner(System.in);
@@ -36,16 +34,15 @@ public class AsciiToEmoji
             // Task 1.2: Read a line from the scanner object
             line = scanner.nextLine();
 
-
             // Task 2: Convert the emoji letters to emojis
             for (int i = 0; i < line.length(); i++) {
                 ch = line.charAt(i);
                 if (ch == 'h' || ch == 'H') {
                     System.out.print(":-)");
                 } else if (ch == 'a' || ch == 'A') {
-                    System.out.print(":-(");
+                    System.out.print("*^*");
                 } else if (ch == 's' || ch == 'S') {
-                    System.out.print(";-)");
+                    System.out.print(":-(");
                 } else {
                     System.out.print(ch);
                 }
@@ -53,6 +50,6 @@ public class AsciiToEmoji
 
             System.out.println();
 
-        } while (line != "bye");
+        } while (!line.equals("bye"));
     }
 }
